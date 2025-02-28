@@ -43,30 +43,41 @@ A pre-trained Bert transformer was used due to its strong performance in natural
 - **BLEU Score**: Used to evaluate the quality of generated responses by comparing them to reference answers.
 - **F1-Score**: Measured the chatbot's ability to correctly classify and respond to user intents.
 - **Perplexity**: Assessed the model's confidence in generating responses.
+  
 - ![image](https://github.com/user-attachments/assets/d3ad7224-8ef2-4177-a387-d7ceded3db74)
   
 **Metric	Score	Interpretation**
-*BLEU_ 0.433_ Generated responses have a 43.3% overlap with the reference answers in terms of n-grams (e.g., 1-gram, 2-gram). This shows a decent overlap with reference, but responses could be more precise.*
-*ROUGE_ -1	0.643_ 64.3% of the words in the reference text are also present in the model’s output.	Strong overlap of key terms, indicating good relevance.*
-*ROUGE_ -L	0.571_	 The model is capturing 57.1% of the key phrases or sequences from the reference. This shows good alignment of phrases, but fluency and coherence could be improved.*
-*Perplexity_	10.076_	Low perplexity, indicating the model is confident in its predictions.*
+- *BLEU_ 0.433_ Generated responses have a 43.3% overlap with the reference answers in terms of n-grams (e.g., 1-gram, 2-gram). This shows a decent overlap with reference, but responses could be more precise.*
+- *ROUGE_ -1	0.643_ 64.3% of the words in the reference text are also present in the model’s output.	Strong overlap of key terms, indicating good relevance.*
+- *ROUGE_ -L	0.571_	 The model is capturing 57.1% of the key phrases or sequences from the reference. This shows good alignment of phrases, but fluency and coherence could be improved.*
+- *Perplexity_	10.076_	Low perplexity, indicating the model is confident in its predictions.*
 
 
 **Qualitative Testing:**
-![chatbot 1](https://github.com/user-attachments/assets/2956305b-39d2-4016-bbc1-4368d7dc1dac)
+![chatbot 1](https://github.com/user-attachments/assets/479c8cb0-5be3-4cb3-a947-3658f6309181)
 
+![chatbot 2](https://github.com/user-attachments/assets/66086f18-41fb-4171-a1cd-f6098464dd89)
+
+![chatbot 3](https://github.com/user-attachments/assets/7ce26e3b-46cd-40fc-ad8f-6267f733e5d0)
+
+![chatbot 4-semantic search relevance](https://github.com/user-attachments/assets/3a49b981-8ef5-4b9e-a677-2632e658834d)
 
 
 ---
 
-#### 5. **Deployment**
-The chatbot was deployed using **Gradio**, a simple and intuitive web interface framework. The deployment process included:
-- **Web Interface**: Users can input their questions in a text box and receive responses from the chatbot in real-time.
-- **API Integration**: The chatbot was also deployed as an API using Flask, allowing integration with other applications.
+## 5. **Deployment**
+The chatbot was deployed using **Gradio**, a simple and intuitive web interface framework. 
 
-**User Interaction:**
-- The interface is user-friendly, with clear instructions for inputting queries.
-- Example conversations were provided to guide users on how to interact with the chatbot.
+### Installation
+To install the required packages, run:
+
+```bash
+pip install -r requirements.txt
+
+
+
+
+
 
 ---
 
