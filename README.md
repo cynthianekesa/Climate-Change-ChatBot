@@ -1,7 +1,7 @@
 # Climate-Change-ChatBot
 This project implements a Climate Change Chatbot using a pre-trained language model fine-tuned on a climate change-related dataset. The chatbot is designed to answer questions and provide accurate information about climate change, its impacts, and potential solutions for improved climate change awareness and empowerment of individuals in its fight.
 
-#### 1. **Introduction**
+## 1. **Introduction**
 This report outlines the development of a **Climate Change Chatbot** using a pre-trained Transformer model from Hugging Face. The chatbot is designed to answer questions related to climate change, providing accurate and contextually relevant responses. The project leverages Hugging Face's `transformers` library and TensorFlow for fine-tuning and deployment. The chatbot is domain-specific, focusing on climate change, and is evaluated using both quantitative metrics and qualitative testing.
 
 ---
