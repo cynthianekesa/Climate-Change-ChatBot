@@ -58,7 +58,6 @@ A pre-trained Bert transformer was used due to its strong performance in natural
 **Qualitative Testing:**
 
 
-![chatbot 1](https://github.com/user-attachments/assets/479c8cb0-5be3-4cb3-a947-3658f6309181)
 
 
 
@@ -66,11 +65,18 @@ A pre-trained Bert transformer was used due to its strong performance in natural
 
 
 
+
+
 ![chatbot 3](https://github.com/user-attachments/assets/7ce26e3b-46cd-40fc-ad8f-6267f733e5d0)
 
 
 
+
+
 ![chatbot 4-semantic search relevance](https://github.com/user-attachments/assets/3a49b981-8ef5-4b9e-a677-2632e658834d)
+
+
+
 
 
 
