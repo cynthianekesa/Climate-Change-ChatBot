@@ -1,26 +1,23 @@
 # Climate-Change-ChatBot
-This project implements a Climate Change Chatbot using a pre-trained language model fine-tuned on a climate change-related dataset. The chatbot is designed to answer questions and provide accurate information about climate change, its impacts, and potential solutions for improved climate change awareness and empowerment of individuals in its fight.
-
 ## 1. **Introduction**
-This report outlines the development of a **Climate Change Chatbot** using a pre-trained Transformer model from Hugging Face. The chatbot is designed to answer questions related to climate change, providing accurate and contextually relevant responses. The project leverages Hugging Face's `transformers` library and TensorFlow for fine-tuning and deployment. The chatbot is domain-specific, focusing on climate change, and is evaluated using both quantitative metrics and qualitative testing.
+This project implements a domain-specific Climate Change Chatbot using a pre-trained language model fine-tuned on a climate change-related dataset. The chatbot is designed to answer questions and provide accurate contextual information about climate change, its impacts, and potential solutions for improved climate change awareness and empowerment of individuals in its fight. It leverages Hugging Face's `transformers` library and TensorFlow for fine-tuning and deployment.
 
 ---
 
-#### 2. **Dataset Collection and Preprocessing**
-The dataset used for training the chatbot consists of **conversational pairs** related to climate change. The dataset was either collected from publicly available sources or created manually to ensure diversity and coverage of various user intents. The dataset includes questions and answers on topics such as global warming, renewable energy, carbon emissions, and climate policies.
+## 2. **Dataset Collection and Preprocessing**
+The dataset used for training the chatbot consists of **conversational pairs** related to climate change. Features inlcude 'answer' and 'question' with 1277 rows. questions and answers on topics such as global warming, renewable energy, carbon emissions, and climate policies. Here is the link to the dataste [https://huggingface.co/datasets/Vinom/ClimateChangeQA]
 
 **Preprocessing Steps:**
-- **Tokenization**: The text data was tokenized using the tokenizer associated with the pre-trained model (e.g., BERT or GPT-2 tokenizer).
+- **Tokenization**: The text data was tokenized using 'bert-base-uncased' pre-trained model suitable for conversational chatbots.
 - **Normalization**: Text was normalized by converting to lowercase, removing special characters, and handling contractions.
-- **Handling Missing Values**: Any incomplete or missing conversational pairs were either removed or manually corrected to ensure data quality.
-- **Dataset Splitting**: The dataset was split into training, validation, and test sets (e.g., 80% training, 10% validation, 10% testing).
+- **Dataset Splitting**: The dataset was split into training, validation, and test sets
+- **Encoding**:The tokenized text was encoded into input IDs and attention masks, which are required by the model for training and inference.
 
-The preprocessed dataset was saved in a format compatible with Hugging Face's `datasets` library, such as JSON or CSV.
 
 ---
 
-#### 3. **Model Selection and Fine-Tuning**
-A pre-trained Transformer model was selected from Hugging Face's model hub. For this project, **BERT** or **GPT-2** was chosen due to their strong performance in natural language understanding and generation tasks.
+## 3. **Model Selection and Fine-Tuning**
+A pre-trained Bert transformer was used due to its strong performance in natural language understanding and generation tasks.
 
 **Fine-Tuning Process:**
 - **Model Initialization**: The pre-trained model was loaded using Hugging Face's `transformers` library.
@@ -29,28 +26,36 @@ A pre-trained Transformer model was selected from Hugging Face's model hub. For 
   - **Batch Size**: Experimented with batch sizes of 16, 32, and 64.
   - **Optimizer**: AdamW optimizer was used with weight decay.
   - **Training Epochs**: Trained for 3–5 epochs to avoid overfitting.
-- **Training**: The model was fine-tuned on the climate change dataset using TensorFlow. Training progress was monitored using validation loss and accuracy.
+- **Training**: Training progress was monitored using validation loss and accuracy.
 
-**Impact of Hyperparameter Adjustments:**
+**Hyperparameter Insights:**
 - A lower learning rate (e.g., 2e-5) resulted in more stable training and better convergence.
 - A batch size of 32 provided a good balance between training speed and memory usage.
+- A higher weight decay (e.g 0.1) helps regularize the model and prevent overfitting, while a lower decay(e.g 0.001) is useful if the model is underfitting.
 - Training for 4 epochs yielded the best performance without overfitting.
+  
 
 ---
 
-#### 4. **Evaluation**
-The chatbot was evaluated using both quantitative metrics and qualitative testing.
+## 4. **Evaluation**
 
 **Quantitative Metrics:**
 - **BLEU Score**: Used to evaluate the quality of generated responses by comparing them to reference answers.
 - **F1-Score**: Measured the chatbot's ability to correctly classify and respond to user intents.
 - **Perplexity**: Assessed the model's confidence in generating responses.
+- ![image](https://github.com/user-attachments/assets/d3ad7224-8ef2-4177-a387-d7ceded3db74)
+  
+**Metric	Score	Interpretation**
+*BLEU_ 0.433_ Generated responses have a 43.3% overlap with the reference answers in terms of n-grams (e.g., 1-gram, 2-gram). This shows a decent overlap with reference, but responses could be more precise.*
+*ROUGE_ -1	0.643_ 64.3% of the words in the reference text are also present in the model’s output.	Strong overlap of key terms, indicating good relevance.*
+*ROUGE_ -L	0.571_	 The model is capturing 57.1% of the key phrases or sequences from the reference. This shows good alignment of phrases, but fluency and coherence could be improved.*
+*Perplexity_	10.076_	Low perplexity, indicating the model is confident in its predictions.*
+
 
 **Qualitative Testing:**
-- The chatbot was tested with a variety of climate change-related questions, such as:
-  - "What are the main causes of global warming?"
-  - "How can we reduce carbon emissions?"
-- The chatbot's responses were analyzed for relevance, accuracy, and coherence. It was also tested with out-of-domain queries to ensure it could reject or handle them appropriately.
+![chatbot 1](https://github.com/user-attachments/assets/2956305b-39d2-4016-bbc1-4368d7dc1dac)
+
+
 
 ---
 
