@@ -5,7 +5,7 @@ This project implements a domain-specific Climate Change Chatbot using a pre-tra
 ---
 
 ## 2. **Dataset Collection and Preprocessing**
-The dataset used for training the chatbot consists of **conversational pairs** related to climate change. Features inlcude 'answer' and 'question' with 1277 rows. questions and answers on topics such as global warming, renewable energy, carbon emissions, and climate policies. Here is the link to the dataste [https://huggingface.co/datasets/Vinom/ClimateChangeQA]
+The dataset used for training the chatbot consists of **conversational pairs** related to climate change. Features include 'answer' and 'question' with 1277 rows. questions and answers on topics such as global warming, renewable energy, carbon emissions, and climate policies. Here is the link to the dataset [https://huggingface.co/datasets/Vinom/ClimateChangeQA]
 
 **Preprocessing Steps:**
 - **Tokenization**: The text data was tokenized using 'bert-base-uncased' pre-trained model suitable for conversational chatbots.
