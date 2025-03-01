@@ -42,8 +42,11 @@ A pre-trained Bert transformer was used due to its strong performance in natural
 ]
 ```
 
-- Best accuracy was the last hyperparameter pair with an accuracy of `7.2154860496521`
+- Best accuracy was the last hyperparameter pair with an accuracy of `7.2154860496521`from `6.804567`
 - More detailed visual evaluations of other parameters can be seen in the notebook.
+
+
+
 
 
 - A lower learning rate (e.g., 2e-5) resulted in more stable training and better convergence.
