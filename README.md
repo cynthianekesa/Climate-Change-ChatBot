@@ -29,6 +29,23 @@ A pre-trained Bert transformer was used due to its strong performance in natural
 - **Training**: Training progress was monitored using validation loss and accuracy.
 
 **Hyperparameter Insights:**
+- Hyperparameters experimented with 
+
+``bash
+ {"learning_rate": 2e-5, "batch_size": 16, "weight_decay": 0.01},
+    {"learning_rate": 5e-6, "batch_size": 8, "weight_decay": 0.02},
+    {"learning_rate": 1e-6, "batch_size": 32, "weight_decay": 0.005},
+    {"learning_rate": 3e-5, "batch_size": 16, "weight_decay": 0.1},
+    {"learning_rate": 1e-5, "batch_size": 16, "weight_decay": 0.001},
+    {"learning_rate": 1e-6, "batch_size": 8, "weight_decay": 0.01},
+    {"learning_rate": 1e-5, "batch_size": 16, "weight_decay": 0.02},
+]
+```
+
+- Best accuracy was the last hyperparameter pair with an accuracy of `7.2154860496521`
+- More detailed visual evaluations of other parameters can be seen in the notebook.
+
+
 - A lower learning rate (e.g., 2e-5) resulted in more stable training and better convergence.
 - A batch size of 32 provided a good balance between training speed and memory usage.
 - A higher weight decay (e.g 0.1) helps regularize the model and prevent overfitting, while a lower decay(e.g 0.001) is useful if the model is underfitting.
