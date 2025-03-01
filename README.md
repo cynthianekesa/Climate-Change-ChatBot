@@ -29,9 +29,9 @@ A pre-trained Bert transformer was used due to its strong performance in natural
 - **Training**: Training progress was monitored using validation loss and accuracy.
 
 **Hyperparameter Insights:**
-- Hyperparameters experimented with 
+- Hyperparameters experimented with:
 
-``bash
+```bash
  {"learning_rate": 2e-5, "batch_size": 16, "weight_decay": 0.01},
     {"learning_rate": 5e-6, "batch_size": 8, "weight_decay": 0.02},
     {"learning_rate": 1e-6, "batch_size": 32, "weight_decay": 0.005},
